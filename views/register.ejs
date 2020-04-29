@@ -1,0 +1,46 @@
+<%- include("partials/header"); -%>
+
+<h1>Register</h1>
+<script>
+  function verifyInputs()
+  {
+    if(document.getElementsByName("name")[0].value.length===0 || document.getElementsByName("username")[0].value.length===0 || document.getElementsByName("password")[0].value.length===0  || document.getElementsByName("confirmedPassword")[0]==0)
+    {
+      alert('Please fill all required fields');
+    }
+    else{
+      if(document.getElementsByName("password")[0].value === document.getElementsByName("confirmedPassword")[0].value){
+      document.getElementsByName("form")[0].submit();
+    }
+    else{
+      alert('Entered passwords do not match');
+    }
+    }
+  }
+  </script>
+<form action="/register" method="post" name="form">
+    <div>
+      <label>Name:</label>
+      <input class="form-control" type="text" name="name"/>
+
+      <label>Username:</label>
+      <input class="form-control" type="text" name="username"/>
+
+        <label>Email:</label>
+        <input class="form-control" type="email" name="email"/>
+    </div>
+    <div>
+        <label>Password:</label>
+        <input class="form-control" type="password" name="password"/>
+        <label>Confirm Password:</label>
+        <input class="form-control" type="password" name="confirmedPassword"/>
+    </div>
+    <br>
+    <div>
+     <button type="button" name="button" onclick="verifyInputs()">Register</button>
+    </div>
+</form>
+
+<br>
+<a href="/login" style="color:blue">Login to an existing account</a>
+<%- include("partials/footer"); -%>

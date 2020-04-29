@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Vakyareeti - Login</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- Custom Fonts -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/login.css" rel="stylesheet">
+  <link href="css/login2.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+      <div class="col-md-8 col-lg-6">
+        <div id="errmsg" hidden>
+          &nbsp;&nbsp;&nbsp;
+          <i class="fa fa-times-circle"></i>
+          &nbsp;&nbsp;&nbsp;
+          Error
+        </div>
+        <div class="login d-flex align-items-center py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-9 col-lg-8 mx-auto">
+                <div class="row">
+                  <div class="col-4">
+
+                    <h3 class="login-heading mb-4">Log In</h3>
+                  </div>
+
+                </div>
+
+                <form id="in-form">
+                  <input type="text" hidden>
+                  <div class="form-label-group">
+                    <input type="email" id="si-Email" class="form-control" placeholder="Email address" required autofocus>
+                    <label for="si=Email">Email address</label>
+                  </div>
+
+                  <div class="form-label-group">
+                    <input type="password" id="si-Password" class="form-control" placeholder="Password" required>
+                    <label for="si-Password">Password</label>
+                  </div>
+
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Remember password</label>
+                  </div>
+                  <button onclick="signin()" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
+                  <div class="text-center">
+                    <a class="small" href="#">Forgot password?</a></div>
+                </form>
+
+
+
+
+                <!--Sign Up-->
+                <form class="form-signin" id="up-form" hidden>
+                  <div class="form-label-group">
+                    <input type="text" id="su-Name" class="form-control" placeholder="Username" required autofocus>
+                    <label for="su-Username">Name</label>
+                  </div>
+
+                  <div class="form-label-group">
+                    <input type="email" id="su-Email" class="form-control" placeholder="Email address" required>
+                    <label for="su-Email">Email address</label>
+                  </div>
+                  <hr>
+                  <div class="form-label-group">
+                    <input type="password" id="su-Password" class="form-control" placeholder="Password" required>
+                    <label for="su-Password">Password</label>
+                  </div>
+
+                  <div class="form-label-group">
+                    <input type="password" id="su-ConfirmPassword" class="form-control" placeholder="Password" required>
+                    <label for="su-ConfirmPassword">Confirm password</label>
+                  </div>
+
+                  <button onclick="signup()" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button>
+                  <hr class="my-4">
+                  <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign up with Google</button>
+                  <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign up with Facebook</button>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+</body>
+
+</html>

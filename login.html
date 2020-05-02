@@ -24,116 +24,96 @@
   <!-- Custom CSS -->
   <link href="css/style.css" rel="stylesheet">
   <link href="css/login.css" rel="stylesheet">
-  <link href="css/login2.css" rel="stylesheet">
 
 </head>
 
 <body id="page-top">
 
 
-  <div class="container-fluid">
-    <div class="row no-gutter">
-      <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
-      <div class="col-md-8 col-lg-6">
-        <div id="errmsg" hidden>
-          &nbsp;&nbsp;&nbsp;
-          <i class="fa fa-times-circle"></i>
-          &nbsp;&nbsp;&nbsp;
-          Error
-        </div>
-        <div class="login d-flex align-items-center py-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-9 col-lg-8 mx-auto">
-                <div class="row">
-                  <div class="col-4">
-                    <a href="#" onclick="logInShow()" id="signin">
-                    <h3 class="login-heading mb-4" >Log In</h3>
-                  </a>
-                  </div>
-                  <div class="col-4">
-                    <h3 class="login-heading mb-4">|</h3>
-                  </div>
-                  <div class="col-4">
-                    <a href="#" onclick="signUpShow()" id="signup" disabled>
-                    <h3 class="login-heading mb-4" >Sign Up</h3>
-                  </a>
-                  </div>
+  <body>
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card card-signin my-5">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-4">
+                  <a href="#" onclick="logInShow()" id="signin">
+                  <h5 class="card-title" >Log In</h5>
+                </a>
                 </div>
-
-
-                <form id="in-form" class="form-signin">
-
-                  <div class="form-label-group">
-                    <input type="email" id="si-Email" class="form-control" placeholder="Email address" required>
-                    <label for="si=Email">Email address</label>
-                  </div>
-
-                  <div class="form-label-group">
-                    <input type="password" id="si-Password" class="form-control" placeholder="Password" required>
-                    <label for="si-Password">Password</label>
-                  </div>
-
-                  <div class="custom-control custom-checkbox mb-3">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Remember password</label>
-                  </div>
-                  <button onclick="signin()" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
-                  <div class="text-center">
-                    <a class="small" href="#">Forgot password?</a></div>
-                </form>
-                <hr>
-                <form id="in-oauth" class="form-signin">
-                    <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> </button>
-                    <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> </button>
-                </form>
-
-                  <!--Sign Up-->
-
-                  <form class="form-signin" id="up-form" hidden>
-                    <div class="form-label-group">
-                      <input type="text" id="su-Name" class="form-control" placeholder="Username" required autofocus>
-                      <label for="su-Username">Name</label>
-                    </div>
-
-                    <div class="form-label-group">
-                      <input type="email" id="su-Email" class="form-control" placeholder="Email address" required>
-                      <label for="su-Email">Email address</label>
-                    </div>
-                    <hr>
-                    <div class="form-label-group">
-                      <input type="password" id="su-Password" class="form-control" placeholder="Password" required>
-                      <label for="su-Password">Password</label>
-                    </div>
-
-                    <div class="form-label-group">
-                      <input type="password" id="su-ConfirmPassword" class="form-control" placeholder="Password" required>
-                      <label for="su-ConfirmPassword">Confirm password</label>
-                    </div>
-
-                    <button onclick="signup()" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button>
-                    <hr class="my-4">
-                    <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign up with Google</button>
-                    <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign up with Facebook</button>
-                  </form>
-
+                <div class="col-4">
+                  <h5 class="card-title align-center">|</h5>
+                </div>
+                <div class="col-4">
+                  <a href="#" onclick="signUpShow()" id="signup" disabled>
+                  <h5 class="card-title" >Sign Up</h5>
+                </a>
                 </div>
               </div>
+
+              <form class="form-signin" id="in-form">
+                <div class="form-label-group">
+                  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                  <label for="inputEmail">Email address</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                  <label for="inputPassword">Password</label>
+                </div>
+
+                <div class="custom-control custom-checkbox mb-3">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">Remember password</label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+                <hr class="my-4">
+                <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
+                <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
+              </form>
+
+              <form class="form-signin" id="up-form" hidden>
+                <div class="form-label-group">
+                  <input type="email" id="suName" class="form-control" placeholder="Name" required autofocus>
+                  <label for="suName">Name</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="email" id="suUname" class="form-control" placeholder="username" required autofocus>
+                  <label for="suUname">Username</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="email" id="suEmail" class="form-control" placeholder="Email address" required autofocus>
+                  <label for="suEmail">Email address</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="password" id="suPassword" class="form-control" placeholder="Password" required>
+                  <label for="suPassword">Password</label>
+                </div>
+
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+                <hr class="my-4">
+                <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign up with Google</button>
+                <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign up with Facebook</button>
+              </form>
+
+
             </div>
           </div>
-            <p align="center" class="text-muted small mb-0">Made by <a href="https://silv3rh4t.github.io">Akhand Yaduvanshi</a></p>
         </div>
       </div>
     </div>
+  </body>
 
     <!-- JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="js/script.min.js"></script>
     <script src="js/login.js"></script>
-
-<script src="js/auth.js"></script>
   </body>
 
   </html>

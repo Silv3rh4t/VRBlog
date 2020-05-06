@@ -15,53 +15,70 @@
         <label for="usr">Search Posts</label>
         <input type="text" class="form-control" id="usr">
       </div>
-      <div class="radio">
-        <label><input type="radio" name="optradio" checked>By Title</label>
+      <div class="row">
+        <div class="col-3">
+          <div class="radio">
+            <label><input type="radio" name="optradio" checked>By Title</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="optradio">By Author</label>
+          </div>
+        </div>
+        <div class="col-9">
+          <button type="submit" class="btn btn-outline-primary">Submit</button>
+        </div>
       </div>
-      <div class="radio">
-        <label><input type="radio" name="optradio">By Author</label>
-      </div>
-
     </form>
   </div>
 
   <div class="container">
-    <div class="row bg-light">
-      <div class="col-2">
-        Date
+      <div class="row bg-light">
+        <div class="col-1">
+          Date
+        </div>
+        <div class="col-1">
+          Time
+        </div>
+        <div class="col-2">
+          username
+        </div>
+        <div class="col-4">
+          Title
+        </div>
+        <div class="col-2">
+          Votes
+        </div>
+        <div class="col-2">
+
+        </div>
       </div>
-      <div class="col-2">
-        Time
-      </div>
-      <div class="col-4">
-        Title
-      </div>
-      <div class="col-2">
-        Votes
-      </div>
-      <div class="col-2">
-      </div>
-    </div>
 
     <!--Entry div-->
     <div class="row">
-      <div class="col-2">
-        17/03
+      <div class="col-1">
+        <%=date%>
       </div>
-      <div class="col-2">
+      <div class="col-1">
         00:00
       </div>
+      <div class="col-2">
+        <%= posts[i].username %>
+      </div>
       <div class="col-4">
-        Rohan Sharma
+        <%= posts[i].title %>
       </div>
       <div class="col-2">
-        -100
+        <%= posts[i].votes %>
       </div>
       <div class="col-2">
+        <a class="btn btn-outline-dark btn-sm" href="#" role="button">Edit</a>
+        <a class="btn btn-outline-danger btn-sm" href="#" role="button">Delete</a>
       </div>
     </div>
 
 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 
 </html>

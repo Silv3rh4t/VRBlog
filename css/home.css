@@ -11,3 +11,18 @@ body {
 .list-group-item{
   background: rgba(128,128,128,0.1) !important;
 }
+a.sic {
+    position: relative;
+    left: 300px;
+
+    z-index: 10000;
+}
+input.search-form {
+    padding: 10px;
+}
+#searchbar {
+    width: 300px;
+}
+.search-toggle {
+    float: right;
+}

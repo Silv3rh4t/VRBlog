@@ -10,3 +10,9 @@ function toggleMode() {
   }
 
 }
+
+$("a.sic").click(function () {
+    $(".search-toggle").animate({
+        width: 'toggle'
+    });
+});
